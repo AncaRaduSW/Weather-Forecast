@@ -17,3 +17,17 @@
 
 ### Piechart for the Weather Types
 ![img_5.png](img_5.png)
+
+
+## Linear Regressions
+### Linear Regression for a random split of the train and test values
+    -> Calculated for the maximum temperature by date
+        - Mean Squared Error : 10.995749191074138
+        - R2 score :  0.7885720668665486
+![img_7.png](img_7.png)
+
+### Linear Regression for a default split of the train and test values (80-20)
+    -> Calculated for the maximum temperature by date
+        - Mean Squared Error = 11.297832171916653
+        - R2 score :  0.7936850590036174
+![img_8.png](img_8.png)

@@ -31,3 +31,9 @@
         - Mean Squared Error = 11.297832171916653
         - R2 score :  0.7936850590036174
 ![img_8.png](img_8.png)
+
+### Linear SVR for a default split of the train and test values (80-20)
+    -> Calculated for the minimum temperature by date
+        - Mean Squared Error :  5.427936303952954
+        - R2 score :  0.7927002682556106
+![img_9.png](img_9.png)

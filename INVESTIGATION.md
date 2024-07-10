@@ -11,3 +11,9 @@
 
 ### Scatterplot for the values of the wind speed for every year
 ![img_3.png](img_3.png)
+
+### Countplot for the Weather Types
+![img_6.png](img_6.png)
+
+### Piechart for the Weather Types
+![img_5.png](img_5.png)

@@ -47,8 +47,6 @@ def temp_max_facegrid_lineplot(dataframe: pd.DataFrame):
 
 
 def precipitation_facegrid_scatterplot(dataframe: pd.DataFrame):
-    """ TODO:
-    """
     dataframe['date'] = pd.to_datetime(dataframe['date'])
     dataframe['month'] = dataframe['date'].dt.month
     dataframe['year'] = dataframe['date'].dt.year
@@ -63,14 +61,24 @@ def precipitation_facegrid_scatterplot(dataframe: pd.DataFrame):
     plt.show()
 
 def weather_countplot(dataframe: pd.DataFrame):
-    """ TODO:
-    """
+    sns.countplot(dataframe, x="weather")
+    plt.xlabel("Weather")
+    plt.ylabel("Count")
+    plt.title("Weather Type Distribution")
+    plt.show()
 
 
 def weather_piechart(dataframe: pd.DataFrame):
-    """ TODO:
-    """
+    colors = sns.color_palette('pastel')[0:5]
 
+    data = dataframe.weather.value_counts()
+    data.plot.pie(y="weather", autopct='%1.1f%%',colors=colors)
+
+    plt.xlabel("Weather")
+    plt.ylabel("Type")
+
+    plt.title("Weather Piechart")
+    plt.show()
 
 def lr_predictor_random_split(dataframe: pd.DataFrame):
     """ TODO:
@@ -90,9 +98,11 @@ def svr_predictor_default_split(dataframe: pd.DataFrame):
 def main():
     df = pd.read_csv('seattle-weather.csv')
     # dataset_info(df)
-    temp_max_histplot(df)
+    # temp_max_histplot(df)
     # temp_max_facegrid_lineplot(df)
     # precipitation_facegrid_scatterplot(df)
+    weather_countplot(df)
+    weather_piechart(df)
 
 
 if __name__ == '__main__':
